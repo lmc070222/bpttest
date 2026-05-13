@@ -1,0 +1,3 @@
+/home/lmc123456/BPT/build/CMakeFiles/code.dir
+/home/lmc123456/BPT/build/CMakeFiles/edit_cache.dir
+/home/lmc123456/BPT/build/CMakeFiles/rebuild_cache.dir
