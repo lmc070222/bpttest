@@ -1,0 +1,9 @@
+Fix array_test2 and establish 75-point safety net
+
+- IQ alloc gated by flush_valid: entries dispatched on the flush cycle
+  previously escaped the flush clear (alloc ran after flush in the same block)
+- Freelist LIFO push/pop collision: same-cycle push now reuses the slot
+  vacated by the pop, fixing stale-value reallocation at low latency
+- Acceptance: all 3 basic programs PASS at LATENCY=10 and LATENCY=1
+- OoO self-test (div 100/7 + young addi): young instruction writes back
+  ~20 cycles before the slow div, commit stays in order
